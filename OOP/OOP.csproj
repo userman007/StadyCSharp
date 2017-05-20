@@ -41,6 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Log\BaseLog.cs" />
+    <Compile Include="Log\CheckListLog.cs" />
+    <Compile Include="Log\SelectListLog.cs" />
+    <Compile Include="Log\Table.cs" />
     <Compile Include="Vehicles\AirBus.cs" />
     <Compile Include="Vehicles\AirVehicle.cs" />
     <Compile Include="Vehicles\F16.cs" />
