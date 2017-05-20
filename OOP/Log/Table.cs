@@ -24,7 +24,7 @@ namespace OOP.Log
 			sb.AppendLine("</tr>");
 
 			sb.AppendLine("<tr>");
-			for (var i = 0; i < people.Length; i++)
+			for (var i = 0; i < people.Count; i++)
 			{
 				sb.AppendLine("<th>");
 				sb.Append(GetName(i));

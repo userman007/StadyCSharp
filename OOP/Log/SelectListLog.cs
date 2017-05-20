@@ -19,7 +19,7 @@ namespace OOP.Log
 			//</select>
 
 			sb.AppendLine("<select>");
-			for (var i = 0; i < people.Length; i++)
+			for (var i = 0; i < people.Count; i++)
 			{
 				sb.AppendLine("<option>");
 				sb.Append(GetName(i));

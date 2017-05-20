@@ -13,7 +13,7 @@ namespace OOP.Log
 		{
 			StringBuilder sb = new StringBuilder();
 			sb.AppendLine("<div style=\"border: solid 1px #eee;\">");
-			for (var i = 0; i < people.Length; i++)
+			for (var i = 0; i < people.Count; i++)
 			{
 				sb.AppendLine("<input type=\"checkbox\" checked=\"checked\" />");
 				sb.Append(GetName(i));

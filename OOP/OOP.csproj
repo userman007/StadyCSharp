@@ -45,6 +45,7 @@
     <Compile Include="Log\CheckListLog.cs" />
     <Compile Include="Log\SelectListLog.cs" />
     <Compile Include="Log\Table.cs" />
+    <Compile Include="Person.cs" />
     <Compile Include="Vehicles\AirBus.cs" />
     <Compile Include="Vehicles\AirVehicle.cs" />
     <Compile Include="Vehicles\F16.cs" />

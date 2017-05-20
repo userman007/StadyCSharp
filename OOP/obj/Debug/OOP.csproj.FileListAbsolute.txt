@@ -7,3 +7,5 @@ D:\My projects\OOP\OOP\obj\Debug\OOP.pdb
 D:\My projects\StadyCSharp\OOP\bin\Debug\OOP.exe.config
 D:\My projects\StadyCSharp\OOP\obj\Debug\OOP.exe
 D:\My projects\StadyCSharp\OOP\obj\Debug\OOP.pdb
+D:\My projects\StadyCSharp\OOP\bin\Debug\OOP.exe
+D:\My projects\StadyCSharp\OOP\bin\Debug\OOP.pdb
