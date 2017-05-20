@@ -8,7 +8,12 @@ namespace OOP.Log
 {
 	public class BaseLog
 	{
-		protected List<Person> people;
+		protected int a;//0
+		protected bool bo;//false
+		protected object b;//null 
+		protected string c;//null
+		protected Person p;//null
+		protected List<Person> people;//null
 		
 		public string GetName(int index)
 		{

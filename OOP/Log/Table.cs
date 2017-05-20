@@ -8,6 +8,18 @@ namespace OOP.Log
 {
 	public class TableLog : BaseLog
 	{
+
+		//можно было бы вынести в базовый клас так как этот метод будет очень полезен для всех наследников
+		public void AddPeople(List<Person> data)
+		{
+			if (data == null) return;
+			if (people == null)
+			{
+				people = new List<Person>();
+			}
+			people.AddRange(data);
+		}
+
 		public override string ToHtml()
 		{
 			StringBuilder sb = new StringBuilder();

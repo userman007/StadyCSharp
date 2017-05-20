@@ -8,7 +8,6 @@ namespace OOP.Log
 {
 	public class CheckListLog : BaseLog
 	{
-
 		public override string ToHtml()
 		{
 			StringBuilder sb = new StringBuilder();

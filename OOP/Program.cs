@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using OOP.Log;
 using OOP.Vehicles;
 
 namespace OOP
@@ -12,6 +13,96 @@ namespace OOP
 		static void Main(string[] args)
 		{
 			object value = new object();
+
+			int a;//0
+			bool bo;//false
+			object b;//null 
+			string c;//null
+			Person p;//null
+			List<Person> pep;//null
+
+			var person1 = new Person { FirstName = "Diana", LastName = "Grakova"};
+			var person2 = new Person { FirstName = "Viktoria", LastName = "Chvikova" };
+			var person3 = new Person { FirstName = "Gleb", LastName = "Zadorojnii" };
+			var person4 = new Person { FirstName = "Nikolai", LastName = "Lisniak" };
+			var person5 = new Person { FirstName = "Volodymyr", LastName = "Babiychuk"};
+			var person6 = new Person { FirstName = "Volodymyr", LastName = "Yarovui" };
+
+			var peopleList = new List<Person>();
+			peopleList.Add(person1);
+			peopleList.Add(person2);
+			peopleList.Add(person3);
+			peopleList.Add(person4);
+			peopleList.Add(person5);
+			peopleList.Add(person6);
+
+
+			var baseLog = new BaseLog();
+			baseLog.AddPerson(person1);
+			baseLog.AddPerson(person2);
+			baseLog.AddPerson(person3);
+			baseLog.AddPerson(person4);
+			baseLog.AddPerson(person5);
+			baseLog.AddPerson(person6);
+			Console.WriteLine(baseLog.ToHtml());
+			Console.WriteLine();
+
+			var cl = new CheckListLog();
+			cl.AddPerson(person1);
+			cl.AddPerson(person2);
+			cl.AddPerson(person3);
+			cl.AddPerson(person4);
+			cl.AddPerson(person5);
+			cl.AddPerson(person6);
+			Console.WriteLine(cl.ToHtml());
+			Console.WriteLine();
+
+			var sl = new SelectListLog();
+			sl.AddPeople(peopleList);
+			//Console.WriteLine(sl.ToHtml());
+			//Console.WriteLine();
+
+			var table = new TableLog();
+			table.AddPeople(peopleList);
+			//Console.WriteLine(table.ToHtml());
+			//Console.WriteLine();
+
+			List<BaseLog> group = new List<BaseLog>();
+			group.Add(baseLog);
+			group.Add(cl);
+			group.Add(sl);
+			group.Add(table);
+
+			List<TableLog> group2 = new List<TableLog>();
+			group2.Add(table);
+
+			//foreach(var item in group2)
+			//{
+				//item.AddPeople(...);
+				//Console.WriteLine(item.ToHtml());
+				//Console.WriteLine();
+			//}
+
+			foreach(var item in group)
+			{
+				//item.AddPerson(...)
+				Console.WriteLine(item.ToHtml());
+				Console.WriteLine();
+			}
+
+			Console.ReadKey();
+
+			var sb = new StringBuilder();
+			foreach (var item in group)
+			{
+				//item.AddPerson(...)
+				sb.AppendLine(item.ToHtml());
+				sb.AppendLine("<br/>");
+			}
+
+			var result = sb.ToString();
+			Console.WriteLine(result);
+
 			var truck = new Truck();
 			var airBus = new AirBus();
 			var vehicle = new Vehicle();
